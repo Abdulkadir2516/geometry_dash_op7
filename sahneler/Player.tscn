@@ -1,5 +1,6 @@
-[gd_scene load_steps=51 format=3 uid="uid://civcmpp6xekxd"]
+[gd_scene load_steps=52 format=3 uid="uid://civcmpp6xekxd"]
 
+[ext_resource type="Script" uid="uid://bejp1rkh21ime" path="res://scripts/player.gd" id="1_8ivhm"]
 [ext_resource type="Texture2D" uid="uid://bvkf6vokekqlx" path="res://assets/layerThree.png" id="2_vlx8e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0jrb"]
@@ -193,7 +194,7 @@ region = Rect2(44, 176, 44, 44)
 atlas = ExtResource("2_vlx8e")
 region = Rect2(0, 176, 44, 44)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fjsgn"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ivhm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -342,11 +343,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="StaticBody2D"]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_8ivhm")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 45.0
-offset_bottom = 46.0
+offset_right = 44.0
+offset_bottom = 44.0
 color = Color(0.407843, 0.25098, 1, 0.286275)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -354,7 +356,6 @@ position = Vector2(22, 22)
 shape = SubResource("RectangleShape2D_r0jrb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(22, 22)
-sprite_frames = SubResource("SpriteFrames_fjsgn")
-frame = 20
-frame_progress = 0.0359967
+position = Vector2(22.5, 22)
+scale = Vector2(1.02273, 1)
+sprite_frames = SubResource("SpriteFrames_8ivhm")
