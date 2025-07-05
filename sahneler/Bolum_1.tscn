@@ -19,8 +19,8 @@ scale = Vector2(1.17139, 0.659668)
 texture = ExtResource("1_ndn72")
 
 [node name="Bg03-hd2" type="Sprite2D" parent="."]
-position = Vector2(1775, 340)
-scale = Vector2(1.123, 0.66)
+position = Vector2(1800, 340)
+scale = Vector2(1.171, 0.66)
 texture = ExtResource("1_ndn72")
 
 [node name="Ground" type="Sprite2D" parent="."]
@@ -28,11 +28,11 @@ position = Vector2(600, 600)
 scale = Vector2(0.259133, 0.259442)
 texture = ExtResource("3_voa06")
 
-[node name="Player" parent="." instance=ExtResource("3_dpcwv")]
-position = Vector2(151, 530)
-scale = Vector2(2.53409, 2.43182)
-
 [node name="Ground2" type="Sprite2D" parent="."]
 position = Vector2(1800, 600)
 scale = Vector2(0.259, 0.259)
 texture = ExtResource("3_voa06")
+
+[node name="Player" parent="." instance=ExtResource("3_dpcwv")]
+position = Vector2(151, 530)
+scale = Vector2(2.53409, 2.43182)
