@@ -7,13 +7,20 @@ func _physics_process(delta):
 
 		if kontrol:
 			kontrol = false
-			for i in range(20):
+			dön()
+			for i in range(25):
 				position.y = position.y-10
 				await get_tree().create_timer(0.02).timeout
 
-			for i in range(20):
+			for i in range(25):
 				position.y = position.y + 10
 				await get_tree().create_timer(0.02).timeout
-			
+			rotation = 0
 			kontrol = true
+		
 			
+func dön():
+	for i in range(10):
+		rotation += 18
+		await get_tree().create_timer(0.1).timeout
+ 
