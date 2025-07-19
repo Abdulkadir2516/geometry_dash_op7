@@ -4,15 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cnf3jyyowk0sa" path="res://assets/spritesheet.png" id="3_yidpg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqjxp"]
-size = Vector2(34.75, 32.5156)
+size = Vector2(43.375, 39.2578)
 
 [node name="engel" type="CharacterBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_kqjxp")
-
 [node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(1.27273, 1.25)
+position = Vector2(3.38813e-21, 1.69407e-21)
+scale = Vector2(1.68182, 1.57955)
 texture = ExtResource("3_yidpg")
 hframes = 6
 vframes = 2
@@ -23,3 +21,6 @@ position = Vector2(1.43051e-06, -1.49012e-08)
 scale = Vector2(1.29474, 1.2358)
 texture = ExtResource("2_3bhxp")
 hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kqjxp")
