@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://civcmpp6xekxd"]
+[gd_scene load_steps=53 format=3 uid="uid://civcmpp6xekxd"]
 
 [ext_resource type="Script" uid="uid://bejp1rkh21ime" path="res://scripts/player.gd" id="1_8ivhm"]
 [ext_resource type="Texture2D" uid="uid://bvkf6vokekqlx" path="res://assets/layerThree.png" id="2_vlx8e"]
@@ -343,6 +343,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Curve" id="Curve_8ivhm"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8ivhm")
 
@@ -360,3 +364,13 @@ shape = SubResource("RectangleShape2D_r0jrb")
 scale = Vector2(0.614, 0.614)
 sprite_frames = SubResource("SpriteFrames_8ivhm")
 frame = 43
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-13, 12)
+amount = 24
+lifetime = 0.7
+gravity = Vector2(-980, -100)
+scale_amount_min = 5.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_8ivhm")
+color = Color(0, 1, 0, 1)

@@ -18,6 +18,7 @@ hframes = 6
 vframes = 2
 
 [node name="sprite2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1.43051e-06, -1.49012e-08)
 scale = Vector2(1.29474, 1.2358)
 texture = ExtResource("2_3bhxp")

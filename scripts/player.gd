@@ -2,9 +2,8 @@ extends CharacterBody2D
 
 var kontrol = true
 func _physics_process(delta):
-	
 	if Input.is_action_just_pressed("jump"):
-
+		$CPUParticles2D.emitting = false
 		if kontrol:
 			kontrol = false
 			dön()
@@ -17,6 +16,8 @@ func _physics_process(delta):
 				await get_tree().create_timer(0.02).timeout
 			rotation = 0
 			kontrol = true
+			$CPUParticles2D.emitting=true
+
 		
 			
 func dön():
