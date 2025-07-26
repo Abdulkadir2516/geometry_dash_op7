@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b184qa8c5l5gw"]
+[gd_scene load_steps=7 format=3 uid="uid://b184qa8c5l5gw"]
 
 [ext_resource type="Texture2D" uid="uid://bo5c5oo4s3l2i" path="res://assets/Screenshot_1.png" id="1_j23sn"]
+[ext_resource type="Script" uid="uid://x6a2o5phl81n" path="res://scripts/giris.gd" id="1_t2j7c"]
+[ext_resource type="Texture2D" uid="uid://7o27me236fh3" path="res://assets/backgrounds/bacground_giris.webp" id="3_fgl3x"]
+[ext_resource type="FontFile" uid="uid://b52ns24q0mmbj" path="res://Fonts/KYOTO WORLD.ttf" id="4_k6yrm"]
+[ext_resource type="PackedScene" uid="uid://civcmpp6xekxd" path="res://sahneler/Player.tscn" id="5_bvxh7"]
+[ext_resource type="Texture2D" uid="uid://qjfrgfafnv22" path="res://assets/ui/next-button.png" id="6_nx75v"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,8 +14,78 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t2j7c")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(600, 340)
 scale = Vector2(0.768886, 0.782932)
 texture = ExtResource("1_j23sn")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -261.0
+offset_top = -199.0
+offset_right = 104.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+step = 3.0
+
+[node name="back" type="Sprite2D" parent="."]
+position = Vector2(600.5, 340)
+scale = Vector2(1.87031, 1.78421)
+texture = ExtResource("3_fgl3x")
+
+[node name="Label" type="Label" parent="back"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_top = -190.0
+offset_right = -64.0
+offset_bottom = -109.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("4_k6yrm")
+theme_override_font_sizes/font_size = 60
+text = "Geometry Dash Op7.9"
+
+[node name="Player" parent="back" instance=ExtResource("5_bvxh7")]
+position = Vector2(-148.906, -19.0561)
+scale = Vector2(3, 3)
+script = null
+
+[node name="Button2" type="Button" parent="back"]
+offset_left = -202.908
+offset_top = 17.3746
+offset_right = -130.908
+offset_bottom = 89.3746
+rotation = 3.14159
+icon = ExtResource("6_nx75v")
+flat = true
+
+[node name="Button" type="Button" parent="back"]
+offset_left = -97.0
+offset_top = -55.0
+offset_right = -25.0
+offset_bottom = 17.0
+icon = ExtResource("6_nx75v")
+flat = true
+
+[node name="Baslat" type="Button" parent="back"]
+offset_left = -241.939
+offset_top = 85.7522
+offset_right = -61.9385
+offset_bottom = 129.752
+text = "Başlat"
+
+[connection signal="pressed" from="back/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="back/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="back/Baslat" to="." method="_on_baslat_pressed"]
