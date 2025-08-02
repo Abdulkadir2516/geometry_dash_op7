@@ -88,6 +88,13 @@ offset_right = -61.9385
 offset_bottom = 129.752
 text = "Başlat"
 
+[node name="ColorPickerButton" type="ColorPickerButton" parent="back"]
+offset_left = -10.9607
+offset_top = -40.354
+offset_right = 21.0393
+offset_bottom = -10.354
+
 [connection signal="pressed" from="back/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="back/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="back/Baslat" to="." method="_on_baslat_pressed"]
+[connection signal="color_changed" from="back/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]

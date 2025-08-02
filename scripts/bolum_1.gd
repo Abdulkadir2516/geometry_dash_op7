@@ -6,6 +6,8 @@ var engel_isimleri: Array
 
 func _ready() -> void:
 	$Player.get_node("AnimatedSprite2D").frame = Ortak.frame
+	$Player.get_node("ColorRect").color = Ortak.color
+
 	for i in range(1,10):
 		engel = $engel.duplicate()
 		engel.name = "engel" + str(i)

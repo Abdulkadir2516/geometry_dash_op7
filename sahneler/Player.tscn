@@ -3,9 +3,6 @@
 [ext_resource type="Script" uid="uid://bejp1rkh21ime" path="res://scripts/player.gd" id="1_8ivhm"]
 [ext_resource type="Texture2D" uid="uid://bvkf6vokekqlx" path="res://assets/layerThree.png" id="2_vlx8e"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0jrb"]
-size = Vector2(22, 23)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ivhm"]
 atlas = ExtResource("2_vlx8e")
 region = Rect2(220, 44, 44, 44)
@@ -347,11 +344,11 @@ animations = [{
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 3
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0jrb"]
+size = Vector2(22, 23)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_8ivhm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_r0jrb")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -14.0
@@ -374,3 +371,6 @@ scale_amount_min = 5.0
 scale_amount_max = 20.0
 scale_amount_curve = SubResource("Curve_8ivhm")
 color = Color(0, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r0jrb")

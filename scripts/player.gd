@@ -1,9 +1,17 @@
 extends CharacterBody2D
 
 var kontrol = true
+
+
 func _physics_process(delta):
 	if Input.is_action_just_pressed("jump"):
 		$CPUParticles2D.emitting = false
+		
+		var r = randi_range(0, 255) / 255.0
+		var g = randi_range(0, 255) / 255.0
+		var b = randi_range(0, 255) / 255.0
+		$ColorRect.color = Color(r, g, b)
+
 		if kontrol:
 			kontrol = false
 			dön()
