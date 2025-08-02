@@ -59,23 +59,25 @@ text = "Geometry Dash Op7.9"
 
 [node name="Player" parent="back" instance=ExtResource("5_bvxh7")]
 position = Vector2(-148.906, -19.0561)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 script = null
 
 [node name="Button2" type="Button" parent="back"]
-offset_left = -202.908
-offset_top = 17.3746
-offset_right = -130.908
-offset_bottom = 89.3746
+offset_left = -184.194
+offset_top = 1.12094
+offset_right = -112.194
+offset_bottom = 73.1209
 rotation = 3.14159
+scale = Vector2(0.6, 0.6)
 icon = ExtResource("6_nx75v")
 flat = true
 
 [node name="Button" type="Button" parent="back"]
-offset_left = -97.0
-offset_top = -55.0
-offset_right = -25.0
-offset_bottom = 17.0
+offset_left = -116.826
+offset_top = -42.5959
+offset_right = -44.8255
+offset_bottom = 29.4041
+scale = Vector2(0.6, 0.6)
 icon = ExtResource("6_nx75v")
 flat = true
 

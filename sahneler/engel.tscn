@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmkhddrtdl14j"]
+[gd_scene load_steps=5 format=3 uid="uid://dmkhddrtdl14j"]
 
 [ext_resource type="Texture2D" uid="uid://djg4cikmrv8ml" path="res://assets/spikes.png" id="2_3bhxp"]
 [ext_resource type="Texture2D" uid="uid://cnf3jyyowk0sa" path="res://assets/spritesheet.png" id="3_yidpg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r2n7q"]
+size = Vector2(76, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqjxp"]
 size = Vector2(43.375, 39.2578)
 
 [node name="engel" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -32.75)
+shape = SubResource("RectangleShape2D_r2n7q")
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(3.38813e-21, 1.69407e-21)
@@ -22,5 +29,7 @@ scale = Vector2(1.29474, 1.2358)
 texture = ExtResource("2_3bhxp")
 hframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_kqjxp")
