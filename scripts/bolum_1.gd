@@ -5,6 +5,12 @@ var engel: CharacterBody2D
 var engel_isimleri: Array
 
 func _ready() -> void:
+	
+	if Ortak.music:
+		$AudioStreamPlayer.volume_db = Ortak.volume
+		$AudioStreamPlayer.play()
+		
+	
 	$Player.get_node("AnimatedSprite2D").frame = Ortak.frame
 	$Player.get_node("ColorRect").color = Ortak.color
 

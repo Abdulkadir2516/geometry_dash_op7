@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b184qa8c5l5gw"]
+[gd_scene load_steps=10 format=3 uid="uid://b184qa8c5l5gw"]
 
 [ext_resource type="Texture2D" uid="uid://bo5c5oo4s3l2i" path="res://assets/Screenshot_1.png" id="1_j23sn"]
 [ext_resource type="Script" uid="uid://x6a2o5phl81n" path="res://scripts/giris.gd" id="1_t2j7c"]
@@ -6,6 +6,22 @@
 [ext_resource type="FontFile" uid="uid://b52ns24q0mmbj" path="res://Fonts/KYOTO WORLD.ttf" id="4_k6yrm"]
 [ext_resource type="PackedScene" uid="uid://civcmpp6xekxd" path="res://sahneler/Player.tscn" id="5_bvxh7"]
 [ext_resource type="Texture2D" uid="uid://qjfrgfafnv22" path="res://assets/ui/next-button.png" id="6_nx75v"]
+[ext_resource type="Texture2D" uid="uid://d2kyqeop11xek" path="res://assets/video.png" id="7_nx75v"]
+[ext_resource type="Texture2D" uid="uid://d0ktwcosg0hiu" path="res://assets/arrow.png" id="8_crsh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nx75v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_nx75v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_crsh7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -40,7 +56,7 @@ scale = Vector2(1.5, 1.5)
 step = 3.0
 
 [node name="back" type="Sprite2D" parent="."]
-position = Vector2(600.5, 340)
+position = Vector2(592, 344)
 scale = Vector2(1.87031, 1.78421)
 texture = ExtResource("3_fgl3x")
 
@@ -89,12 +105,33 @@ offset_bottom = 129.752
 text = "Başlat"
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="back"]
-offset_left = -10.9607
-offset_top = -40.354
-offset_right = 21.0393
-offset_bottom = -10.354
+offset_left = -170.293
+offset_top = 35.3097
+offset_right = -138.293
+offset_bottom = 65.3097
+
+[node name="HSlider" type="HSlider" parent="back"]
+offset_left = -14.4361
+offset_top = 30.2655
+offset_right = 234.564
+offset_bottom = 64.2655
+min_value = -80.0
+max_value = 24.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="back"]
+position = Vector2(10.6934, -17.3746)
+sprite_frames = SubResource("SpriteFrames_nx75v")
+
+[node name="music_on_off" type="Button" parent="back/AnimatedSprite2D"]
+offset_left = -27.0
+offset_top = -26.0
+offset_right = 28.0
+offset_bottom = 27.0
+flat = true
 
 [connection signal="pressed" from="back/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="back/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="back/Baslat" to="." method="_on_baslat_pressed"]
 [connection signal="color_changed" from="back/ColorPickerButton" to="." method="_on_color_picker_button_color_changed"]
+[connection signal="value_changed" from="back/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="back/AnimatedSprite2D/music_on_off" to="." method="_on_music_on_off_pressed"]

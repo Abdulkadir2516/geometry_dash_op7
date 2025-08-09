@@ -3,6 +3,8 @@ extends Control
 @onready var progress_bar = $ProgressBar
 var frame_number = 0
 func _ready():
+	Ortak.music = true
+	$Sprite2D.frame
 	frame_number = $back/Player.get_node("AnimatedSprite2D").frame
 	$Sprite2D.visible=true
 	progress_bar.visible=true
@@ -43,3 +45,19 @@ func _on_baslat_pressed() -> void:
 func _on_color_picker_button_color_changed(color: Color) -> void:
 	$back/Player.get_node("ColorRect").color = $back/ColorPickerButton.color
 	Ortak.color = $back/ColorPickerButton.color
+
+
+func _on_music_on_off_pressed() -> void:
+	
+	if $back/AnimatedSprite2D.frame == 0:
+		$back/AnimatedSprite2D.frame = 1
+		Ortak.music = false
+	else:
+		$back/AnimatedSprite2D.frame = 0
+		Ortak.music = true
+	
+
+
+func _on_h_slider_value_changed(value: float) -> void:
+	
+	Ortak.volume = int($back/HSlider.value)

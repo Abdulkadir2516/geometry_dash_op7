@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b52ns24q0mmbj"
-path="res://.godot/imported/KYOTO WORLD.ttf-99b2a325dad90d8fda8630a7df449942.fontdata"
+path="res://.godot/imported/KYOTO WORLD.ttf-9911b342e1bf0586d616f9b195058753.fontdata"
 
 [deps]
 
-source_file="res://Fonts/KYOTO WORLD.ttf"
-dest_files=["res://.godot/imported/KYOTO WORLD.ttf-99b2a325dad90d8fda8630a7df449942.fontdata"]
+source_file="res://fonts/KYOTO WORLD.ttf"
+dest_files=["res://.godot/imported/KYOTO WORLD.ttf-9911b342e1bf0586d616f9b195058753.fontdata"]
 
 [params]
 

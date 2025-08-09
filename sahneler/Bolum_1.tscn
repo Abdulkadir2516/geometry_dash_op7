@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://7s10is5y4qat"]
+[gd_scene load_steps=7 format=3 uid="uid://7s10is5y4qat"]
 
 [ext_resource type="Script" uid="uid://dbennqaxtv6vy" path="res://scripts/bolum_1.gd" id="1_8tljo"]
 [ext_resource type="Texture2D" uid="uid://1w4ykdqho3wa" path="res://assets/bg03-hd.png" id="1_ndn72"]
 [ext_resource type="PackedScene" uid="uid://civcmpp6xekxd" path="res://sahneler/Player.tscn" id="3_dpcwv"]
 [ext_resource type="Texture2D" uid="uid://d2var36he237h" path="res://assets/17713.jpg" id="3_voa06"]
 [ext_resource type="PackedScene" uid="uid://dmkhddrtdl14j" path="res://sahneler/engel.tscn" id="5_i4njg"]
+[ext_resource type="AudioStream" uid="uid://bn7k55l0voxi" path="res://music/Stereo Madness Geometry Dash.mp3" id="6_wq8gi"]
 
 [node name="Bolum_1" type="Node2D"]
 script = ExtResource("1_8tljo")
@@ -40,3 +41,7 @@ scale = Vector2(2.53409, 2.43182)
 
 [node name="engel" parent="." instance=ExtResource("5_i4njg")]
 position = Vector2(738, 235)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wq8gi")
+parameters/looping = true
