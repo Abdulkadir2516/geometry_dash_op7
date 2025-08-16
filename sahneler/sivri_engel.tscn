@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://k4f6e0cfbrma"]
+
+[ext_resource type="Texture2D" uid="uid://djg4cikmrv8ml" path="res://assets/spikes.png" id="2_nd2mu"]
+
+[sub_resource type="GDScript" id="GDScript_wi78v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_awh7w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kqjxp"]
+size = Vector2(43.375, 39.2578)
+
+[node name="sivri_engel" type="CharacterBody2D"]
+script = SubResource("GDScript_wi78v")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_awh7w")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kqjxp")
+
+[node name="Spikes" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, -12)
+scale = Vector2(1.8125, 1.85227)
+texture = ExtResource("2_nd2mu")
+hframes = 4
