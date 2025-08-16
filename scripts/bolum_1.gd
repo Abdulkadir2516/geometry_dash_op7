@@ -27,7 +27,7 @@ func _process(delta):
 	doit($"Ground", 5)
 	doit($"Ground2", 5)
 	
-	for i in range(1,10):
+	for i in range(1,8):
 		doit2(get_node("engel"+str(i)), 4)
 		
 	

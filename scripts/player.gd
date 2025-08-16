@@ -4,6 +4,7 @@ var kontrol = true
 
 
 func _physics_process(delta):
+	velocity = Vector2.ZERO
 	if Input.is_action_just_pressed("jump"):
 		$CPUParticles2D.emitting = false
 		
@@ -14,19 +15,24 @@ func _physics_process(delta):
 
 		if kontrol:
 			kontrol = false
-			dön()
-			for i in range(25):
-				position.y = position.y-10
-				await get_tree().create_timer(0.02).timeout
+			for i in range(10):
+				velocity.y = velocity.y - 2
+				$".".rotation += 1
 
-			for i in range(25):
-				position.y = position.y + 10
-				await get_tree().create_timer(0.02).timeout
-			rotation = 0
+				move_and_collide(velocity * 7)
+				await get_tree().create_timer(.04).timeout
+			
 			kontrol = true
-			$CPUParticles2D.emitting=true
-
+			
+		$".".rotation = 0
 		
+		$CPUParticles2D.emitting=true
+
+	if position.y < 500 and not Input.is_action_just_pressed("jump") and kontrol:
+		velocity.y += 2
+
+		move_and_collide(velocity * 7)
+		await get_tree().create_timer(.1).timeout
 			
 func dön():
 	for i in range(10):

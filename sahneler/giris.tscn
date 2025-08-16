@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bo5c5oo4s3l2i" path="res://assets/Screenshot_1.png" id="1_j23sn"]
 [ext_resource type="Script" uid="uid://x6a2o5phl81n" path="res://scripts/giris.gd" id="1_t2j7c"]
 [ext_resource type="Texture2D" uid="uid://7o27me236fh3" path="res://assets/backgrounds/bacground_giris.webp" id="3_fgl3x"]
-[ext_resource type="FontFile" uid="uid://b52ns24q0mmbj" path="res://Fonts/KYOTO WORLD.ttf" id="4_k6yrm"]
+[ext_resource type="FontFile" uid="uid://b52ns24q0mmbj" path="res://fonts/KYOTO WORLD.ttf" id="4_k6yrm"]
 [ext_resource type="PackedScene" uid="uid://civcmpp6xekxd" path="res://sahneler/Player.tscn" id="5_bvxh7"]
 [ext_resource type="Texture2D" uid="uid://qjfrgfafnv22" path="res://assets/ui/next-button.png" id="6_nx75v"]
 [ext_resource type="Texture2D" uid="uid://d2kyqeop11xek" path="res://assets/video.png" id="7_nx75v"]

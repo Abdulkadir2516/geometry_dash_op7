@@ -39,9 +39,10 @@ texture = ExtResource("3_voa06")
 position = Vector2(151, 530)
 scale = Vector2(2.53409, 2.43182)
 
-[node name="engel" parent="." instance=ExtResource("5_i4njg")]
-position = Vector2(738, 235)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_wq8gi")
 parameters/looping = true
+
+[node name="engel" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(443, 362)
+script = null
