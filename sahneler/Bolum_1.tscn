@@ -45,11 +45,59 @@ scale = Vector2(2.53409, 2.43182)
 stream = ExtResource("6_wq8gi")
 parameters/looping = true
 
-[node name="cukur_engel" parent="." instance=ExtResource("6_eipd4")]
-position = Vector2(2033, 513)
+[node name="cukur_engel1" parent="." instance=ExtResource("6_eipd4")]
+position = Vector2(2075, 534)
 
-[node name="engel" parent="." instance=ExtResource("5_i4njg")]
-position = Vector2(766, 508)
+[node name="cukur_engel2" parent="." instance=ExtResource("6_eipd4")]
+position = Vector2(2155, 534)
+
+[node name="engel1" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1243, 530)
+
+[node name="engel2" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1317, 530)
+
+[node name="engel3" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1468, 530)
+
+[node name="engel4" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1394, 530)
+
+[node name="engel5" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1770, 530)
+
+[node name="engel6" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1696, 530)
+
+[node name="engel7" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1619, 530)
+
+[node name="engel8" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1545, 530)
+
+[node name="engel9" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1848, 530)
+
+[node name="engel10" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1922, 530)
+
+[node name="engel11" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(2228, 530)
+
+[node name="engel12" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(1999, 530)
+
+[node name="engel13" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(2530, 530)
+
+[node name="engel14" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(2456, 530)
+
+[node name="engel15" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(2379, 530)
+
+[node name="engel16" parent="." instance=ExtResource("5_i4njg")]
+position = Vector2(2305, 530)
 
 [node name="sivri_engel" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1362, 512)
+position = Vector2(1626, 218)

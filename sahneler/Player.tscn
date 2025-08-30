@@ -376,7 +376,6 @@ scale_amount_curve = SubResource("Curve_8ivhm")
 color = Color(0, 1, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_r0jrb")
 
 [node name="Area2D" type="Area2D" parent="."]
