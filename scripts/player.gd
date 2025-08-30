@@ -3,7 +3,6 @@ extends CharacterBody2D
 var kontrol = true
 var kontrol2 = true
 
-
 func _physics_process(delta):
 	
 	velocity = Vector2.ZERO
@@ -45,13 +44,10 @@ func _physics_process(delta):
 			kontrol2 = false
 
 		
-		
 func dön():
 	for i in range(10):
 		rotation += 18
 		await get_tree().create_timer(0.1).timeout
  
-
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	print("Öldün")
