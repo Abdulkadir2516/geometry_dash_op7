@@ -5,6 +5,12 @@ var kontrol2 = true
 
 func _physics_process(delta):
 	
+	if Input.is_action_pressed("g"):
+		visible = false
+	else:
+		visible= true
+	
+	
 	velocity = Vector2.ZERO
 	if Input.is_action_just_pressed("jump") and kontrol2:
 		kontrol2 = false
