@@ -325,42 +325,42 @@ position = Vector2(8300, 536)
 script = null
 
 [node name="sivri_engel24" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1123, 43)
+position = Vector2(9188, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel25" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1195, 43)
+position = Vector2(9260, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel26" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1268, 43)
+position = Vector2(9333, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel27" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1340, 43)
+position = Vector2(9405, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel28" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1411, 43)
+position = Vector2(9476, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel29" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1483, 43)
+position = Vector2(9548, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel30" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1556, 43)
+position = Vector2(9621, -45)
 rotation = 3.14159
 script = null
 
 [node name="sivri_engel31" parent="." instance=ExtResource("8_7fv6i")]
-position = Vector2(1628, 43)
+position = Vector2(9693, -45)
 rotation = 3.14159
 script = null
 
